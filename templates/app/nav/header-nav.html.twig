@@ -1,0 +1,14 @@
+<nav class="btn-group">
+    <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu"
+            title="Menu" data-bs-placement="left">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+    <a href="{{ path('app',{route:'profile'}) }}" role="button" class="btn text-white" title="Profile"
+       data-bs-placement="bottom" data-bz-auth="{{ csrf_token('navs') }}">
+        <i class="bi bi-person-fill"></i>
+    </a>
+    <a href="{{ path('app_logout') }}" type="button" class="btn" title="Exit" data-bs-placement="bottom"
+       id="logout_btn">
+        <i class="bi bi-door-open-fill text-white"></i>
+    </a>
+</nav>
