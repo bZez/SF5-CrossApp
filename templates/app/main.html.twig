@@ -1,0 +1,33 @@
+<div class="modal top fade" id="app" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="true" role="main"
+     aria-labelledby="appTitle" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <main class="modal-content bg-transparent">
+            <div class="modal-header border-0 bg-transparent pb-0">
+                <h5 class="modal-title" id="appTitle">
+                    <a href="{{ path('app',{route:'home'}) }}" role="button" data-bz-auth="{{ csrf_token('navs') }}"
+                       title="graphicNAIVETY Home" data-bs-placement="bottom">
+                        <img src="{{ asset('img/logo-gn-text.svg') }}" alt="graphicNAIVETY logotype" height="30px">
+                    </a>
+                </h5>
+                {% include 'app/nav/header-nav.html.twig' %}
+            </div>
+            <div class="row ps-3">
+                <div class="col-12 text-start">
+                    <button class="btn btn-sm text-white opacity-75" onclick="history.back()"><span class="d-inline-block position-relative"><i class="bi bi-skip-backward-fill small"></i> go back&nbsp;
+                    <svg class="position-absolute" style="bottom: -.2rem;left: 0;" viewBox="0 0 274 8">
+                        <path fill="none" stroke="white" stroke-width="4"
+                              d="M174,456.290698 C307.466899,452.763566 398.466899,451 447,451"
+                              transform="translate(-173 -450)">
+                        </path>
+                    </svg>
+                </span></button>
+                </div>
+            </div>
+            <div class="modal-body p-0 h-100" style="overflow-x: hidden"></div>
+            <div class="modal-footer border-0 bg-transparent">
+                {% include 'app/nav/footer-nav.html.twig' %}
+            </div>
+        </main>
+    </div>
+    {% include 'app/offcanvas.html.twig' %}
+</div>
